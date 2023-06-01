@@ -1,0 +1,9 @@
+Flask==2.2.3
+gluonnlp==0.10.0
+googletrans==4.0.0rc1
+kobert_transformers==0.5.1
+numpy==1.22.4
+Requests==2.31.0
+torch==2.0.1+rocm5.4.2
+transformers==4.28.1
+#~orch==2.0.0a0+git254afb8
