@@ -24,3 +24,58 @@ python app.py
 
 
 ## Structure
+Import Statements: The necessary libraries and modules are imported.
+
+Model Loading: The StableLM-Tuned-Alpha-7b language model is loaded into memory using the AutoModelForCausalLM class from the transformers library. The tokenizer is also initialized.
+
+Helper Functions:
+
+StopOnTokens class: Implements a stopping criteria for text generation.
+chat function: Generates text based on the provided conversation history and system message using the loaded language model.
+Flask Application:
+
+                +------------------------+
+                |    Import Statements    |
+                +------------------------+
+                            |
+                            |
+                            v
+                +------------------------+
+                |      Model Loading      |
+                +------------------------+
+                            |
+                            |
+                            v
+                +------------------------+
+                |    Helper Functions     |
+                +------------------------+
+                            |
+                            |
+                            v
+                +------------------------+
+                |    Flask Application    |
+                +------------------------+
+                            |
+               +----------------------------+
+               |                            |
+               v                            v
+         +--------------+           +------------------+
+         |    /chatbot  |           |     /model       |
+         +--------------+           +------------------+
+                |                            |  
+                |                            |
+                |                            |
+                |                            |
+                v                            v
+                         
+               +-------------------------+
+               |      Main Execution     |
+               +-------------------------+
+
+
+## APIs
+
+| Route	| Method	| Request Payload| 	Response|
+-----------------|-----------------|------------------------|-----------------
+| /chatbot	| POST|	start_message: string<br>msg: string	| String: The chatbot's response translated into Korean. |
+/model|	POST	|userId: string<br>year: string<br>month: string<br>date: string<br>start_message: string	| JSON object with the following fields:<br>summary: string (the summary of the chat history)<br>seg: string (the sentiment analysis result)
