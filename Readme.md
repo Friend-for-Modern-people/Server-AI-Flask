@@ -37,7 +37,6 @@ python app.py
 
 ```
 
-## Structure
 Import Statements: The necessary libraries and modules are imported.
 
 Model Loading: The StableLM-Tuned-Alpha-7b language model is loaded into memory using the AutoModelForCausalLM class from the transformers library. The tokenizer is also initialized.
@@ -86,6 +85,16 @@ Flask Application:
                |      Main Execution     |
                +-------------------------+
 
+
+## System Architecture
+![image](https://github.com/Friend-for-Modern-people/Server-AI-Flask/assets/80394866/7c86028a-d932-4535-bc80-e91c0f1211b8)
+
+Two Service Domain
+* User Domain
+* AI Domain
+
+Each service implements a single business capability within a bounded context and communicates with other services through well-defined APIs
+Which means it could be extends as MSA architecture
 
 ## APIs
 
