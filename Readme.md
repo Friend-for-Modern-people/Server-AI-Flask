@@ -22,6 +22,20 @@ Which is consist of StableLM and KoBart. It can be used for these tasks
 python app.py
 ```
 
+## File Structure
+
+```
+.
+├── Readme.md
+├── app.py
+├── app_openai.py
+├── model_210519.pickle
+├── requirements.txt
+└── segment_predict.py
+
+0 directories, 6 files
+
+```
 
 ## Structure
 Import Statements: The necessary libraries and modules are imported.
